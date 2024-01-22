@@ -28,8 +28,8 @@ pca = PCA(n_components=2)  # You can choose the number of components
 x_train_pca = pca.fit_transform(x_train_scaled)
 
 # Alternatively, using t-SNE
-#tsne = TSNE(n_components=2, random_state=42)
-#x_train_tsne = tsne.fit_transform(x_train_scaled)
+tsne = TSNE(n_components=2, random_state=42)
+x_train_tsne = tsne.fit_transform(x_train_scaled)
 
 # Step 3: Visualize the reduced dataset
 # Visualize the reduced data using scatter plots or other visualization techniques

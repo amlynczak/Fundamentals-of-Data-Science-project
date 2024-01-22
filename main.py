@@ -25,18 +25,23 @@ def main():
     #1 summary of the data - report
 
     #2 reducing the data dimensionality
+    print("\nREDUCING DIMENSIONALITY FROM A DATASET..\n")
     data_red_2d, data_red_3d = reduction(x_train_scaled)
 
     #3 visualising the reduced data
+    print("\nVISUALISING THE DATASED...\n")
     visualisation(data_red_2d, data_red_3d, y_train, "solutions/img/visualisation")
 
     #4 clustering the data
+    print("\nCLUSTERING A DATASET...\n")
     cluster_and_classify(data_red_2d, y_train)
 
     #5 splitting the data into train and test
+    print("\nSPLITTING A DATASET...\n")
     x_train_split, X_test_split, y_train_split, y_test_split = split_dataset(x_train_scaled, y_train)
 
     #6 performing classification and evaluating its result
+    print("\nCLASSIFICATION...\n")
     classification_KNN(x_train_split, X_test_split, y_train_split, y_test_split)
     classification_RFC(x_train_split, X_test_split, y_train_split, y_test_split)
     classification_LR(x_train_split, X_test_split, y_train_split, y_test_split)
