@@ -1,0 +1,4 @@
+myenv/*
+*.docx
+solutions/__pycache__/*
+archive/*
