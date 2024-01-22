@@ -36,12 +36,12 @@ def cluster_and_classify(data, y_train, labels=None, n_clusters=10):
         plot_tree(classifier, filled=True, feature_names=[f'Feature {i}' for i in range(data.shape[1])], class_names=[str(i) for i in np.unique(labels)])
         plt.title(f"Cluster {cluster_label}")
 
-    # Confusion matrix for clustering quality assessment
     matrix = confusion_matrix(y_train, cluster_labels)
     print("Confusion matrix:")
     print(matrix)
 
     plt.tight_layout()
-    plt.show()
+    plt.savefig("solutions/img/clusters.png")
+    #plt.show()
 
     return classifiers, cluster_labels

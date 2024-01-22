@@ -7,7 +7,6 @@ def visualisation(data_2d, data_3d, labels=None, save_path=None):
     plt.title('2d PCA')
     plt.xlabel('Principal Component 1')
     plt.ylabel('Principal Component 2')
-    #plt.colorbar()
     if save_path is not None:
         plt.savefig(save_path + '_2d_pca_plot.png')
     else:
@@ -20,7 +19,6 @@ def visualisation(data_2d, data_3d, labels=None, save_path=None):
     ax.set_xlabel('Principal Component 1')
     ax.set_ylabel('Principal Component 2')
     ax.set_zlabel('Principal Component 3')
-    #fig.colorbar(scatter)
     
     if save_path is not None:
        plt.savefig(save_path + '_3d_pca_plot.png')
